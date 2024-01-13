@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
-from google.cloud import translate
 from Seqmatch import similarity, apostrophe_checker
 from html.parser import HTMLParser
 from sys import exit
@@ -19,20 +18,14 @@ api_key = 'AIzaSyAdiQFUXy5Dgr4coKTWwWJllIM5oVRUruc'
 signIn = 'sign-in-btn'
 gotoUsername = 'top_login'
 gotoPassword = 'top_password'
-wrongChallenges = []
-startpractice = 'Strengthen skills'
-untimed = '_1pp2C'
-timed = '_3XJPq'
-translate_client = translate.Client()
 h = HTMLParser()
-targLang = ''
 rerun = 'yes'
 
 
 def welcome():
-    print( "Welcome to my pain!")
+    print( "Welcome!")
     sleep(1)
-    print( "Lets finish this, please?")
+    print( "Lets finish this?")
     sleep(1)
     print( "Launching page...")
     global driver
@@ -65,7 +58,7 @@ def setup():
 
 
 def skill_or_practice():
-	print("Do you want to do (A)skills or (B)")
+	print("Do you want to do (A)skills or (B) (Will be check xp gained)")
 	target = input("> ")
 	if target.lower() == "a":
 		driver.get('https://duolingo.com/practice')
