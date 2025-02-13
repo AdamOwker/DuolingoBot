@@ -5,7 +5,7 @@
 // @grant       none
 // @version     0
 // @author      *-
-// @description Issa code that dont work anymore atm
+// @description Its a code that dont work anymore 
 // ==/UserScript==
 
 let autoSolveInterval;
